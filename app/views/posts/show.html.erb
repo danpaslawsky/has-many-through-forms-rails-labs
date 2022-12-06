@@ -22,7 +22,7 @@ Commentors:
 <% end %>
 </ul>
 
-<%= form_for @post.comments.build do |f| %>
+<%= form_for Comment.new do |f| %>
   <%= f.hidden_field :post_id %>
   <p>
     <%= f.collection_select :user_id, User.all, :id, :username %>
